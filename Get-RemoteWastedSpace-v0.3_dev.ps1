@@ -84,7 +84,8 @@ function Get-RemotedWastedSpace
       $drivePercentFree = (100*($driveFreeSpace / $driveSize))
       
       if ($drivePercentFree -gt $PercentFreeSpace){
-        if ($driveSize -le $minDiskSpaceToConsider){
+        if ($driveSize -le $minDiskSpaceToConsider){
+	
             Write-Host "Drive: $driveName of Server: $computerName is $driveSize (GB) and not enter in the List" -ForegroundColor Black -BackgroundColor White
 
             }#if Drive Size
